@@ -54,7 +54,6 @@ for (let row of rows) {
                     })
                 }
                 event.links = links
-                console.log(links)
             }
             fileData.events.push(event)
         }
