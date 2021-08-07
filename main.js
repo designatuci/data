@@ -41,8 +41,8 @@ for (let row of rows) {
                 title: row.title,
                 time: row.time,
                 type: row.type,
-                description: row.description,
-                location: row.location
+                desc: row.description,
+                place: row.location
             }
             if (row.links != "") {
                 var links = []
