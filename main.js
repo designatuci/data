@@ -1,4 +1,3 @@
-import pkg from 'simple-git';
 import GoogleSpreadsheet from 'google-spreadsheet'
 import fs, { link } from 'fs'
 // import SimpleGit from 'simple-git';
