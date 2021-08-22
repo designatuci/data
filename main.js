@@ -10,15 +10,6 @@ const apiKey = "AIzaSyAdZJbuWhBhiDQ-L3fGD02HdUpVgMwrqFs"
 const doc = new GoogleSpreadsheet.GoogleSpreadsheet('16Kl3rvCKqopZhwirNFaku1dtE5wslvE49i6e2AGPBp0')
 doc.useApiKey(apiKey);
 
-const gitOptions = {
-    baseDir: process.cwd(),
-    binary: 'git',
-    maxConcurrentProcesses: 6,
-}
-// const git = simpleGit(gitOptions)
-
-
-
 await doc.loadInfo()
 console.log("Reading "+doc.title)
 
@@ -43,7 +34,7 @@ for (let row of rows) {
                 desc: row.description,
                 place: row.location
             }
-            if (row.links != "") {
+            if (row.links && row.links.length > 0) {
                 var links = []
                 let groups = row.links.matchAll(`\(([^:()]+)[: ]+([^()]+)\)`)
                 for (let l of groups) {
