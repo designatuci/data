@@ -1,6 +1,7 @@
 {
   "type": "module",
   "dependencies": {
-    "google-spreadsheet": "^3.1.15"
+    "google-spreadsheet": "^3.1.15",
+    "open-graph-scraper": "^4.9.1"
   }
 }
